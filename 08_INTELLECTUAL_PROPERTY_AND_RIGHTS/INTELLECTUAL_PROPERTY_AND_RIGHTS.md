@@ -1,0 +1,25 @@
+# Intellectual Property and Rights — LASIO
+
+**Company:** Anticloud FZ LLE
+**Model:** PAX L5 Narrow L2 General 27B
+**Project:** LASIO | Category: OIL_GAS
+**Upstream:** https://github.com/kinverarity1/lasio (MIT)
+
+## Overview
+
+This document covers intellectual property and rights for the Anticloud integration of LASIO.
+
+Read/write LAS files (oil/gas well log format)
+
+## Anticloud Integration
+
+PAX L5 Narrow L2 General 27B is integrated into LASIO to provide:
+- Local AI inference with zero cloud dependency
+- AIOSS tamper-evident audit chain
+- AES-256 encryption at rest
+- Single-binary deployment
+
+## Contact
+
+Lois-Kleinner Alpasan — CEO & CTO, Anticloud FZ LLE
+lois@0-1.gg | 0-1.gg
