@@ -1,0 +1,21 @@
+{
+ "framework": "12_CMMC_2",
+ "title": "CMMC 2.0 Level 2 (NIST SP 800-171)",
+ "project": "LASIO",
+ "basis": [
+  {
+   "check": "10_nist_sp_800_53",
+   "status": "PASS",
+   "observed": "12/12 controls evidenced (100.0%)"
+  },
+  {
+   "check": "05_git_health",
+   "status": "PASS",
+   "observed": "head=70a56a0d055abc8eddea0e957a3bea7d55aaec0c commits=1 clea"
+  }
+ ],
+ "verdict": "CONTROLS EVIDENCED \u2014 all basis checks PASS",
+ "pax_provenance": "Run ID loiskleinner/pax-benchmark-runner v3, 2026-10-02, Kaggle T4 x2 (2x 16GB VRAM), Ubuntu 22.04, Python 3.12. These are PAX L5 Narrow L2 General 27B model-level results \u2014 shared model component, not this project's verdict.",
+ "bench_sha3": "bc0b5d1da91a4a38de6f21ca11cf25245ab9c49d921330538b2b2028fae119c4",
+ "register_sha3": "deacb9f35b41e2b3ab2c38305cdc2ae9fc0861d5b5a2ac2fad030526457d2201"
+}

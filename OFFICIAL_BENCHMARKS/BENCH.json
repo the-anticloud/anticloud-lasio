@@ -1,0 +1,266 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "LASIO",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\OIL_GAS\\LASIO\\UPSTREAM_CLONE",
+    "git": {
+      "head": "20fb98d7e2c9444bbbc9ee0e7aff4420b7c5b512",
+      "url": "https://github.com/kinverarity1/lasio",
+      "branch": "main",
+      "committed_at": "2026-02-13T05:30:11+00:00"
+    }
+  },
+  "metrics": {
+    "files_total": 234,
+    "source_files_scanned": 31,
+    "lines_of_code": 7502,
+    "languages": {
+      ".las": 144,
+      ".py": 32,
+      ".rst": 13,
+      ".ipynb": 10,
+      "(none)": 6,
+      ".png": 6,
+      ".csv": 5,
+      ".txt": 4,
+      ".pdf": 4,
+      ".md": 3,
+      ".yaml": 1,
+      ".yml": 1,
+      ".cff": 1,
+      ".toml": 1,
+      ".json": 1
+    }
+  },
+  "licence": {
+    "spdx": "MIT",
+    "class": "A",
+    "source_file": "LICENSE",
+    "redistribution_allowed": true
+  },
+  "dependencies": {
+    "count": 1,
+    "unique": 1,
+    "by_ecosystem": {
+      "pypi": 1
+    },
+    "list": [
+      {
+        "ecosystem": "pypi",
+        "name": "numpy",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "numpy"
+      }
+    ]
+  },
+  "owasp_top10": {
+    "total_findings": 8,
+    "files_with_findings": 8,
+    "severity": {
+      "high": 1,
+      "medium": 1,
+      "low": 6
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A03-Injection": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "tests/test_serialization.py",
+            "line": 27,
+            "cwe": "CWE-502",
+            "snippet": "las = pickle.load(fr)"
+          }
+        ]
+      },
+      "A04-InsecureDesign": {
+        "count": 5,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "tests/test_enhancements.py",
+            "line": 92,
+            "cwe": "CWE-",
+            "snippet": "# TODO: make above test in reverse-ordered LAS (e.g. STRT > STOP)"
+          },
+          {
+            "severity": "low",
+            "file": "tests/test_open_file.py",
+            "line": 72,
+            "cwe": "CWE-",
+            "snippet": "las = read(egfn(\"sampleXXXDOES NOT EXIST.las\"))"
+          },
+          {
+            "severity": "low",
+            "file": "tests/test_sectionitems.py",
+            "line": 175,
+            "cwe": "CWE-",
+            "snippet": "item = sitems.get(\"WELL\", default=lasio.HeaderItem(mnemonic=\"XXX\", value=\"3\"))"
+          },
+          {
+            "severity": "low",
+            "file": "lasio/las.py",
+            "line": 289,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Revise so that Version, Well and Parameter(Log_Parameter)"
+          },
+          {
+            "severity": "low",
+            "file": "docs/source/conf.py",
+            "line": 8,
+            "cwe": "CWE-",
+            "snippet": "\"sphinx.ext.autodoc\","
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 0,
+        "findings": []
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "lasio/__init__.py",
+            "line": 44,
+            "cwe": "CWE-319",
+            "snippet": "# http://stackoverflow.com/q/2183233/2988730, especially"
+          }
+        ]
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "medium",
+            "file": "lasio/examples.py",
+            "line": 54,
+            "cwe": "CWE-918",
+            "snippet": "response = urllib2.urlopen(url)"
+          }
+        ]
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 0,
+    "files_with_findings": 0,
+    "severity": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:1c4275b4-f974-5b8b-809c-c927acca6004",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-06T05:48:57Z",
+      "component": {
+        "type": "application",
+        "name": "LASIO",
+        "version": "20fb98d7e2c9",
+        "bom-ref": "pkg:generic/anticloud/LASIO@20fb98d7e2c9",
+        "purl": "pkg:generic/anticloud/LASIO@20fb98d7e2c9",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": "20fb98d7e2c9444bbbc9ee0e7aff4420b7c5b512"
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/kinverarity1/lasio"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": [
+      {
+        "type": "library",
+        "name": "numpy",
+        "version": "unspecified",
+        "purl": "pkg:pypi/numpy",
+        "bom-ref": "pypi/numpy@unspecified"
+      }
+    ]
+  },
+  "elapsed_seconds": 6.34
+}
